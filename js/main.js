@@ -61,7 +61,4 @@ document.getElementById('express-delivery').addEventListener('click', function (
     document.getElementById('delivery-cost').innerText = '20';
     updateTotal();
 });
-//apply promo code btn handler
-document.getElementById('apply-btn').addEventListener('click', function () {
-    promoCodeUse();
-});
+
