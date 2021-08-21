@@ -15,17 +15,15 @@ function updateTotal() {
 //Promo code use
 function promoCodeUse() {
     const promoCode = document.getElementById('promo-code');
-    const totalBalance = lowerTotalCost.innerText
+    const totalBalance = totalPrice.innerText
     if (promoCode.value == 'stevekaku') {
         const discount = (totalBalance * 20) / 100;
         const discountTotal = totalBalance - discount;
         lowerTotalCost.innerText = discountTotal;
         promoCode.value = '';
-        document.getElementById('error').innerText = '';
-        promoCode.setAttribute("disabled", true);
-    } else if (promoCode.value != 'stevekaku') {
-        document.getElementById('error').innerText = 'Please enter valid promo code!!';
-        document.getElementById('error').style.color = 'red';
+    } else {
+        promoCode.value = '';
+        alert('Please insert valid coupon code.');
     }
 };
 // 8GB Unified Memory Button handler
